@@ -1,0 +1,42 @@
+@property --degrees-filled {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.progress-circle {
+  margin-top: 1000px;
+  position: relative;
+}
+
+.progress-circle,
+.progress-circle .outer-ring,
+.progress-circle .inner-circle {
+  border-radius: 50%;
+}
+
+.progress-circle,
+.progress-circle .outer-ring {
+  height: 9rem;
+  width: 9rem;
+}
+
+.progress-circle .outer-ring {
+  transition: --degrees-filled ease-in-out 1.5s;
+
+  background-image: conic-gradient(
+    from 0deg,
+    red var(--degrees-filled),
+    lightgray var(--degrees-filled) 360deg
+  );
+}
+
+.progress-circle .inner-circle {
+  height: 8rem;
+  width: 8rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  background-color: white;
+}
