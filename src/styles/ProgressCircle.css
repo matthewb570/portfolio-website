@@ -4,9 +4,20 @@
   initial-value: 0deg;
 }
 
+@property --fill-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: black;
+}
+
+:root {
+  --outer-ring-size: 7rem;
+  --inner-circle-size: 6rem;
+}
+
 .progress-circle {
-  margin-top: 1000px;
   position: relative;
+  cursor: default;
 }
 
 .progress-circle,
@@ -17,8 +28,8 @@
 
 .progress-circle,
 .progress-circle .outer-ring {
-  height: 9rem;
-  width: 9rem;
+  height: var(--outer-ring-size);
+  width: var(--outer-ring-size);
 }
 
 .progress-circle .outer-ring {
@@ -26,17 +37,47 @@
 
   background-image: conic-gradient(
     from 0deg,
-    red var(--degrees-filled),
-    lightgray var(--degrees-filled) 360deg
+    var(--fill-color) var(--degrees-filled),
+    rgb(35, 35, 35) var(--degrees-filled) 360deg
   );
 }
 
 .progress-circle .inner-circle {
-  height: 8rem;
-  width: 8rem;
+  height: var(--inner-circle-size);
+  width: var(--inner-circle-size);
   position: absolute;
   left: 50%;
   top: 50%;
   translate: -50% -50%;
-  background-color: white;
+  background-color: rgb(35, 35, 35);
+}
+
+.progress-circle .inner-circle > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--inner-circle-size);
+  width: var(--inner-circle-size);
+  overflow: hidden;
+  font-size: 1.2rem;
+  color: var(--fill-color);
+}
+
+.progress-circle .inner-circle .primary-display,
+.progress-circle .inner-circle .hover-display {
+  position: absolute;
+  top: 0;
+  transition: ease-in-out 0.2s;
+}
+
+.progress-circle .inner-circle .primary-display,
+.progress-circle:hover .inner-circle .hover-display {
+  visibility: visible;
+  opacity: 1;
+}
+
+.progress-circle:hover .inner-circle .primary-display,
+.progress-circle .inner-circle .hover-display {
+  visibility: hidden;
+  opacity: 0;
 }

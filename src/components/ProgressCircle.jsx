@@ -3,7 +3,12 @@ import { useState, useEffect, useRef } from "react";
 
 const INTERSECTION_OBSERVER_THRESHOLD = 0.1;
 
-export default function ProgressCircle({ percent }) {
+export default function ProgressCircle({
+  percent,
+  fillColor,
+  primaryDisplay,
+  hoverDisplay,
+}) {
   const [isInView, setIsInView] = useState(false);
 
   const divProgressCircle = useRef(null);
@@ -38,12 +43,21 @@ export default function ProgressCircle({ percent }) {
   }
 
   return (
-    <div className="progress-circle" ref={divProgressCircle}>
+    <div
+      className="progress-circle"
+      style={{ "--fill-color": fillColor }}
+      ref={divProgressCircle}
+    >
       <div
-        className="outer-ring "
-        style={{ "--degrees-filled": `${!isInView ? 0 : degreesFilled}deg` }}
+        className="outer-ring"
+        style={{
+          "--degrees-filled": `${!isInView ? 0 : degreesFilled}deg`,
+        }}
       ></div>
-      <div className="inner-circle"></div>
+      <div className="inner-circle">
+        <div className="primary-display">{primaryDisplay}</div>
+        <div className="hover-display">{hoverDisplay}</div>
+      </div>
     </div>
   );
 }
