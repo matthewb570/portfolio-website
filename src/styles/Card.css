@@ -1,0 +1,40 @@
+.card {
+  max-width: 25rem;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.3);
+}
+
+.card .title {
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.card .main-content {
+  padding: 1rem;
+}
+
+.card .link-list {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.6rem;
+
+  margin-top: 1rem;
+}
+
+.card .link-list a.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  box-sizing: content-box;
+  height: 25px;
+  width: 25px;
+  transition: scale 0.1s ease-in-out;
+}
+
+.card .link-list a.icon:hover {
+  scale: 1.1;
+}
