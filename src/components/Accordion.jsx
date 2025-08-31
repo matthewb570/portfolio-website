@@ -2,22 +2,17 @@ import { useState } from "react";
 import "../styles/Accordion.css";
 
 export default function Accordion({ accordionEntryDefinitions }) {
-  // TODO: Render accordionEntryDefinitions
   return (
     <div className="accordion">
-      <AccordionEntry
-        title={"test title"}
-        content={<div style={{ padding: "5rem" }}>test content</div>}
-      />
-      <AccordionEntry
-        title={"test title 2"}
-        content={
-          <div style={{ padding: "5rem" }}>
-            <div>test content 2</div>
-            <div>test content 2</div>
-          </div>
-        }
-      />
+      {accordionEntryDefinitions?.map((accordionEntryDefinition) => {
+        return (
+          <AccordionEntry
+            title={accordionEntryDefinition.title}
+            content={accordionEntryDefinition.content}
+            key={accordionEntryDefinition.title}
+          />
+        );
+      })}
     </div>
   );
 }
@@ -37,7 +32,7 @@ function AccordionEntry({ title, content }) {
   );
 }
 
-class AccordionEntryDefinition {
+export class AccordionEntryDefinition {
   title;
   content;
 
