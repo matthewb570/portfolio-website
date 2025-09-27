@@ -15,6 +15,10 @@
   --inner-circle-size: 6rem;
 }
 
+.progress-circle-container {
+  color: var(--fill-color);
+}
+
 .progress-circle {
   position: relative;
   cursor: default;
@@ -38,7 +42,7 @@
   background-image: conic-gradient(
     from 0deg,
     var(--fill-color) var(--degrees-filled),
-    #eaeaea var(--degrees-filled) 360deg
+    #fafafa var(--degrees-filled) 360deg
   );
 }
 
@@ -49,7 +53,7 @@
   left: 50%;
   top: 50%;
   translate: -50% -50%;
-  background-color: #eaeaea;
+  background-color: #fafafa;
 }
 
 .progress-circle .inner-circle > div {
@@ -60,7 +64,6 @@
   width: var(--inner-circle-size);
   overflow: hidden;
   font-size: 1.2rem;
-  color: var(--fill-color);
 }
 
 .progress-circle .inner-circle .primary-display,
@@ -80,4 +83,10 @@
 .progress-circle .inner-circle .hover-display {
   visibility: hidden;
   opacity: 0;
+}
+
+.progress-circle-container .title {
+  text-align: center;
+  padding: 0;
+  margin: 1rem 0 0 0;
 }

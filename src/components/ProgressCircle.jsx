@@ -8,6 +8,7 @@ export default function ProgressCircle({
   fillColor,
   primaryDisplay,
   hoverDisplay,
+  title,
 }) {
   const [isInView, setIsInView] = useState(false);
 
@@ -44,20 +45,22 @@ export default function ProgressCircle({
 
   return (
     <div
-      className="progress-circle"
+      className="progress-circle-container"
       style={{ "--fill-color": fillColor }}
-      ref={divProgressCircle}
     >
-      <div
-        className="outer-ring"
-        style={{
-          "--degrees-filled": `${!isInView ? 0 : degreesFilled}deg`,
-        }}
-      ></div>
-      <div className="inner-circle">
-        <div className="primary-display">{primaryDisplay}</div>
-        <div className="hover-display">{hoverDisplay}</div>
+      <div className="progress-circle" ref={divProgressCircle}>
+        <div
+          className="outer-ring"
+          style={{
+            "--degrees-filled": `${!isInView ? 0 : degreesFilled}deg`,
+          }}
+        ></div>
+        <div className="inner-circle">
+          <div className="primary-display">{primaryDisplay}</div>
+          <div className="hover-display">{hoverDisplay}</div>
+        </div>
       </div>
+      <h3 class="title">{title}</h3>
     </div>
   );
 }

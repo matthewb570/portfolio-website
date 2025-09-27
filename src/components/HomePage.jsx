@@ -1,16 +1,9 @@
-import {
-  SiCplusplus,
-  SiCss,
-  SiHtml5,
-  SiJavascript,
-  SiReact,
-  SiSpring,
-} from "@icons-pack/react-simple-icons";
 import Accordion, { AccordionEntryDefinition } from "./Accordion";
 import ProgressCircle from "./ProgressCircle";
 import ProjectCard from "./ProjectCard";
 import "../styles/HomePage.css";
 import MatthewBurgessImage from "../assets/matthew_burgess.jpg";
+import JavaScriptLogo from "../assets/javascript.svg";
 
 // TODO: Finish this
 
@@ -49,55 +42,76 @@ function IntroSection() {
 function SkillsSection() {
   return (
     <section id="skills-section">
-      <h2>Skills</h2>
       <div className="progress-circle-list">
         <ProgressCircle
-          percent={0.4}
-          fillColor="#00599C"
-          primaryDisplay={<SiCplusplus size={50} />}
-          hoverDisplay={<div>C++</div>}
+          percent={0.8}
+          fillColor="#61dafb"
+          primaryDisplay={
+            <img src="../../node_modules/devicon/icons/react/react-original.svg" />
+          }
+          hoverDisplay={<div style={{ "font-size": "2rem" }}>8</div>}
+          title={"React"}
         />
-        {/* <ProgressCircle
-         percent={0.6}
-         fillColor="#663399"
-         primaryDisplay={<div>C#</div>}
-         hoverDisplay={<div>C#</div>}
-       />
-       <ProgressCircle
-         percent={0.8}
-         fillColor="#663399"
-         primaryDisplay={<div>Java</div>}
-         hoverDisplay={<div>Java</div>}
-       /> */}
         <ProgressCircle
           percent={0.9}
-          fillColor="#E34F26"
-          primaryDisplay={<SiHtml5 size={50} />}
-          hoverDisplay={<div>HTML</div>}
+          fillColor="#e44d26"
+          primaryDisplay={
+            <img src="../../node_modules/devicon/icons/html5/html5-plain.svg" />
+          }
+          hoverDisplay={<div style={{ "font-size": "2rem" }}>9</div>}
+          title={"HTML"}
         />
         <ProgressCircle
           percent={0.8}
-          fillColor="#663399"
-          primaryDisplay={<SiCss size={50} />}
-          hoverDisplay={<div>CSS</div>}
+          fillColor="#1572b6"
+          primaryDisplay={
+            <img src="../../node_modules/devicon/icons/css3/css3-plain.svg" />
+          }
+          hoverDisplay={<div style={{ "font-size": "2rem" }}>8</div>}
+          title={"CSS"}
         />
         <ProgressCircle
           percent={0.8}
-          fillColor="#F7DF1E"
-          primaryDisplay={<SiJavascript size={50} />}
-          hoverDisplay={<div>JavaScript</div>}
+          fillColor="#ffd43b"
+          primaryDisplay={<img src={JavaScriptLogo} />}
+          hoverDisplay={<div style={{ "font-size": "2rem" }}>8</div>}
+          title={"JavaScript"}
         />
         <ProgressCircle
           percent={0.8}
-          fillColor="#6DB33F"
-          primaryDisplay={<SiSpring size={50} />}
-          hoverDisplay={<div>Spring</div>}
+          fillColor="#77bc1f"
+          primaryDisplay={
+            <img src="../../node_modules/devicon/icons/spring/spring-original.svg" />
+          }
+          hoverDisplay={<div style={{ "font-size": "2rem" }}>8</div>}
+          title={"Spring"}
         />
         <ProgressCircle
           percent={0.8}
-          fillColor="#61DAFB"
-          primaryDisplay={<SiReact size={50} />}
-          hoverDisplay={<div>React</div>}
+          fillColor="#ea2d2e"
+          primaryDisplay={
+            <img src="../../node_modules/devicon/icons/java/java-plain.svg" />
+          }
+          hoverDisplay={<div style={{ "font-size": "2rem" }}>8</div>}
+          title={"Java"}
+        />
+        <ProgressCircle
+          percent={0.6}
+          fillColor="#68217a"
+          primaryDisplay={
+            <img src="../../node_modules/devicon/icons/csharp/csharp-plain.svg" />
+          }
+          hoverDisplay={<div style={{ "font-size": "2rem" }}>6</div>}
+          title={"C#"}
+        />
+        <ProgressCircle
+          percent={0.4}
+          fillColor="#004482"
+          primaryDisplay={
+            <img src="../../node_modules/devicon/icons/cplusplus/cplusplus-plain.svg" />
+          }
+          hoverDisplay={<div style={{ "font-size": "2rem" }}>4</div>}
+          title={"C++"}
         />
       </div>
     </section>

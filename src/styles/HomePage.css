@@ -4,7 +4,7 @@
 }
 
 .page section:nth-child(2n) {
-  background-color: #eaeaea;
+  background-color: #fafafa;
 }
 
 .page section > h2 {
@@ -66,4 +66,9 @@
 .page #intro-section .content img {
   height: 60vh;
   border-radius: 7px;
+}
+
+.page #skills-section .progress-circle img {
+  height: 50px;
+  width: 50px;
 }
