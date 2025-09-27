@@ -38,7 +38,7 @@
   background-image: conic-gradient(
     from 0deg,
     var(--fill-color) var(--degrees-filled),
-    rgb(35, 35, 35) var(--degrees-filled) 360deg
+    #eaeaea var(--degrees-filled) 360deg
   );
 }
 
@@ -49,7 +49,7 @@
   left: 50%;
   top: 50%;
   translate: -50% -50%;
-  background-color: rgb(35, 35, 35);
+  background-color: #eaeaea;
 }
 
 .progress-circle .inner-circle > div {
