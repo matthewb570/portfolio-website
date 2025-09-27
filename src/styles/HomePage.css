@@ -80,3 +80,9 @@
   gap: 2rem;
   padding: 2rem;
 }
+
+.page #projects-section .project-card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}

@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCard";
 import "../styles/HomePage.css";
 import MatthewBurgessImage from "../assets/matthew_burgess.jpg";
 import JavaScriptLogo from "../assets/javascript.svg";
+import CodeImage from "../assets/code3.jpg";
 
 // TODO: Finish this
 
@@ -122,14 +123,56 @@ function ProjectsSection() {
   return (
     <section id="projects-section">
       <h2>Projects</h2>
-      <ProjectCard
-        imageSource=""
-        imageAltText="Project image"
-        title="Title"
-        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum harum commodi perspiciatis nemo! Doloremque voluptatem non distinctio. Consequuntur repellendus, dicta laboriosam iste architecto nesciunt veniam fugiat, suscipit vel ipsa reprehenderit?"
-        githubUrl="https://www.github.com"
-        demoUrl="https://www.github.com"
-      />
+      <div className="project-card-list">
+        <ProjectCard
+          imageSource={CodeImage}
+          imageAltText="Project image"
+          title="Title"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum harum commodi perspiciatis nemo! Doloremque voluptatem non distinctio. Consequuntur repellendus, dicta laboriosam iste architecto nesciunt veniam fugiat, suscipit vel ipsa reprehenderit?"
+          githubUrl="https://www.github.com"
+          demoUrl="https://www.github.com"
+        />
+        <ProjectCard
+          imageSource={CodeImage}
+          imageAltText="Project image"
+          title="Title"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum harum commodi perspiciatis nemo! Doloremque voluptatem non distinctio. Consequuntur repellendus, dicta laboriosam iste architecto nesciunt veniam fugiat, suscipit vel ipsa reprehenderit?"
+          githubUrl="https://www.github.com"
+          demoUrl="https://www.github.com"
+        />
+        <ProjectCard
+          imageSource={CodeImage}
+          imageAltText="Project image"
+          title="Title"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum harum commodi perspiciatis nemo! Doloremque voluptatem non distinctio. Consequuntur repellendus, dicta laboriosam iste architecto nesciunt veniam fugiat, suscipit vel ipsa reprehenderit?"
+          githubUrl="https://www.github.com"
+          demoUrl="https://www.github.com"
+        />
+        <ProjectCard
+          imageSource={CodeImage}
+          imageAltText="Project image"
+          title="Title"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum harum commodi perspiciatis nemo! Doloremque voluptatem non distinctio. Consequuntur repellendus, dicta laboriosam iste architecto nesciunt veniam fugiat, suscipit vel ipsa reprehenderit?"
+          githubUrl="https://www.github.com"
+          demoUrl="https://www.github.com"
+        />
+        <ProjectCard
+          imageSource={CodeImage}
+          imageAltText="Project image"
+          title="Title"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum harum commodi perspiciatis nemo! Doloremque voluptatem non distinctio. Consequuntur repellendus, dicta laboriosam iste architecto nesciunt veniam fugiat, suscipit vel ipsa reprehenderit?"
+          githubUrl="https://www.github.com"
+          demoUrl="https://www.github.com"
+        />
+        <ProjectCard
+          imageSource={CodeImage}
+          imageAltText="Project image"
+          title="Title"
+          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum harum commodi perspiciatis nemo! Doloremque voluptatem non distinctio. Consequuntur repellendus, dicta laboriosam iste architecto nesciunt veniam fugiat, suscipit vel ipsa reprehenderit?"
+          githubUrl="https://www.github.com"
+          demoUrl="https://www.github.com"
+        />
+      </div>
     </section>
   );
 }
