@@ -1,4 +1,5 @@
-.page section:nth-child(2n + 1) {
+.page section:nth-child(2n + 1),
+.page footer {
   background-color: #3a506b;
   color: white;
 }
@@ -85,4 +86,13 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.page footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 5rem;
 }

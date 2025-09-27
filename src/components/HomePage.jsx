@@ -15,6 +15,7 @@ export default function HomePage() {
       <SkillsSection />
       <ProjectsSection />
       <ExperienceSection />
+      <Footer />
     </main>
   );
 }
@@ -204,5 +205,16 @@ function ExperienceSection() {
       <h2>Experience</h2>
       <Accordion accordionEntryDefinitions={accordionEntryDefinitions} />
     </section>
+  );
+}
+
+function Footer() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer>
+      <div>Copyright © {year} Matthew Burgess</div>
+      <div>Images used are property of their respective owners.</div>
+    </footer>
   );
 }
